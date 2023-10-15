@@ -1,0 +1,450 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: rgb(109, 27, 154);
+    --acsent-color: rgb(229, 191, 243);
+    --bg-color-1: rgb(246, 243, 249);
+    --bg-color-2: azure;
+    --text-color-light: aliceblue;
+    --text-color-dark: rgb(0, 0, 0);
+}
+
+.darkmode {
+    --theme-color: rgb(27, 34, 121);
+    --acsent-color: rgb(22, 12, 96);
+    --bg-color-1: rgb(17, 1, 44);
+    --bg-color-2: rgb(17, 1, 44);
+    --text-color-light: aliceblue;
+    --text-color-dark: aliceblue;
+}
+
+.toggle-mode {
+    position: fixed;
+    bottom: .3rem;
+    left: .2rem;
+    padding: .1rem;
+    font-size: .7rem;
+    color: var(--bg-color-2);
+    border-radius: 30rem;
+    background-color: var(--text-color-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(228, 142, 142);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    background-color: var(--bg-color-1);
+    overflow-x: hidden;
+    color: var(--text-color-dark);
+}
+
+.nav-bar {
+    padding: 1rem;
+    background-color: var(--theme-color);
+    display: flex;
+    color: var(--text-color-light);
+    flex-wrap: wrap;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
+    justify-content: space-between;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.logo {
+    width: 50px;
+    background-color: transparent;
+}
+
+.nav-bar li {
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+    color: var(--text-color-light);
+    font-size: 1rem;
+}
+
+/* section a */
+.section-A-container {
+    margin-top: 100px;
+    margin-bottom: 1.5rem;
+}
+
+.section-A {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; debugging*/
+}
+
+.section-A .form {
+
+    width: clamp(350px, 60%, 550px);
+    background-color: var(--acsent-color);
+    padding: 2rem;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, .5);
+
+
+}
+
+.section-A .form h1 {
+    margin-bottom: 1rem;
+    font-size: calc(2rem, 3vw, 5rem);
+    text-align: center;
+}
+
+.section-A .form label {
+    display: block;
+    margin-bottom: .4rem;
+    font-weight: 600;
+    margin-left: 1.6rem;
+    text-align: left;
+}
+
+.form input,
+.form textarea {
+    padding: 1rem;
+    display: block;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.form textarea {
+    height: 100px;
+}
+
+.form button {
+    border: 0;
+    background-color: var(--theme-color);
+    color: var(--text-color-light);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    display: block;
+    width: 90%;
+    transition: .4s ease-in-out;
+
+}
+
+
+.section-A :is(input,
+    textarea,
+    button) {
+    margin-inline: auto;
+}
+
+.section-A button:hover {
+    background-color: var(--text-color-light);
+    color: var(--theme-color);
+    outline: 2px solid var(--theme-color);
+}
+
+::placeholder {
+    color: var(--theme-color);
+    font-size: 1rem;
+}
+
+/* section a end */
+h1 {
+    text-align: center;
+}
+
+.section-header {
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+    animation: poptext 2s infinite ease-in-out;
+}
+
+@keyframes poptext {
+    0% {
+        color: rgb(243, 241, 241);
+    }
+
+    25% {
+        color: var(--theme-color);
+    }
+
+    50% {
+        color: chocolate;
+    }
+
+    75% {
+        color: crimson;
+        transform: scale(1.3);
+    }
+
+    100% {
+        color: green;
+        transform: scale(1);
+    }
+}
+
+
+
+.section-B {
+    min-height: 50vh;
+    max-width: 100vh;
+    display: grid;
+    border: 1px solid var(--theme-color);
+    place-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.section-B_Container {
+    padding: clamp(.5rem, 2vw, 2rem);
+    color: var(--text-color-dark);
+    background-color: var(--bg-color-2);
+}
+
+.section-B input {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.section-B h1 {
+    margin: 1rem;
+}
+
+.section-B button {
+    padding: 1rem;
+    background-color: var(--theme-color);
+    color: var(--text-color-light);
+    border: 0;
+    font-weight: 600;
+    margin: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.section-B .data {
+    text-align: center;
+}
+
+.ordered_list {
+    padding-block: 1rem;
+    list-style: none;
+}
+
+.ordered_list li::before {
+    content: "🔥 ";
+}
+
+.section-B button:hover {
+    background-color: var(--text-color-light);
+    color: var(--theme-color);
+    outline: 2px solid var(--theme-color);
+}
+
+
+/* section c */
+.section_C {
+    text-align: center;
+    display: grid;
+    place-content: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+
+}
+
+.section_c-container {
+    background-color: var(--bg-color-1);
+    padding: clamp(.5rem, 2vw, 2rem);
+    color: var(--text-color-dark);
+}
+
+.section_C .btn {
+    padding: 1rem;
+    background-color: var(--theme-color);
+    color: var(--text-color-light);
+    border: 0;
+    width: 120px;
+    display: block;
+    transition: .4s;
+    margin: 1rem auto 1rem auto;
+    font-weight: 600;
+}
+
+.section_C p {
+    opacity: 0;
+    /* width: 80%; */
+    /* transition: .5s ease-in-out; */
+    height: auto;
+    display: none;
+}
+
+.section_C h1 {
+    margin-bottom: 1rem;
+}
+
+.section_C .toggle {
+    margin-top: 2rem;
+    text-align: left;
+    padding: 1rem;
+    margin: auto;
+    opacity: 1;
+    border: 2px solid var(--theme-color);
+    width: 80%;
+    display: block;
+}
+
+.section_C .btn:hover {
+    background-color: var(--text-color-light);
+    color: var(--theme-color);
+    outline: 2px solid var(--theme-color);
+}
+
+.color-box {
+    width: clamp(250px, 70%, 400px);
+    height: 300px;
+    background-color: var(--theme-color);
+    margin: auto;
+}
+
+#select-color {
+    padding: .6rem 1rem .6rem 1rem;
+    color: var(--text-color-light);
+    border: 4px solid rgb(84, 232, 87);
+    font-weight: 600;
+    width: 80%;
+    margin-inline: auto;
+    margin-bottom: .5rem;
+    background-color: var(--theme-color);
+}
+
+/* Image galler */
+.image-gallery h1 {
+    text-align: center;
+    margin: 1rem;
+
+}
+
+.image-gallery {
+    margin-bottom: 1rem;
+}
+
+#slider,
+.wrap,
+.slide-content {
+    margin: auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    height: 480px;
+    overflow-x: hidden;
+}
+
+.wrap {
+    position: relative;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1 {
+    background-image: url("https://static.pexels.com/photos/302889/pexels-photo-302889.jpeg");
+}
+
+.slide2 {
+    background-image: url("https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg");
+}
+
+.slide3 {
+    background-image: url("https://static.pexels.com/photos/226633/pexels-photo-226633.jpeg");
+}
+
+.slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span {
+    font-size: clamp(2rem, 5vw, 5rem);
+    color: var(--text-color-light);
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left {
+    border-width: clamp(20px, 2vw, 30px) clamp(20px, 2vw, 40px) clamp(20px, 2vw, 30px) 0;
+    border-color: transparent var(--theme-color) transparent transparent;
+    left: 0;
+    margin-left: 30px;
+}
+
+#arrow-right {
+    border-width: clamp(20px, 2vw, 30px) 0 clamp(20px, 2vw, 30px) clamp(20px, 2vw, 40px);
+    border-color: transparent transparent transparent var(--theme-color);
+    right: 0;
+    margin-right: 30px;
+}
+
+/* section c end */
+
+
+input,
+textarea {
+    font-weight: 600;
+    color: var(--theme-color);
+    outline: 1px solid var(--theme-color);
+}
+
+button:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .5);
+    transform: translate(-2px, -2px);
+}

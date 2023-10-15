@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5466ff">
+    <title>Project Frontend</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <button class="toggle-mode">Dark-Mode</button>
+    <nav class="nav-bar">
+        <img class="logo" src="jio2.png" alt="">
+        <ul>
+            <li><a href="#section-a">Section-A</a></li>
+            <li><a href="#section-b">Section-B</a></li>
+            <li><a href="#section-c">Section-C</a></li>
+        </ul>
+    </nav>
+    <!-- section A  -->
+    <!-- Survey Form -->
+    <section class="section-A-container" id="section-a">
+        <h1>Section A</h1>
+
+        <section class="section-A">
+            <form class="form" id="form">
+                <h1> Simple HTML Form</h1>
+
+                <label for="name">Name</label>
+                <input type="text" placeholder="Enter your name" id="name">
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" id="email">
+
+                <label for="age">Age</label>
+                <input type="number" placeholder="Enter your age" id="age">
+
+                <label for="comment">Comments</label>
+                <textarea name="text-comments" id="" cols="30" rows="10" placeholder="Add some comment"
+                    id="comment"></textarea>
+                <button type="submit"> Submit</button>
+            </form>
+        </section>
+    </section>
+    <!-- section A  Ends -->
+    <!-- Section B  -->
+    <!-- Section B 1-->
+    <section class="section-B_Container" id="section-b">
+        <h1 class="section-header">Section B</h1>
+        <section class="section-B oddEven">
+            <h1>Check if the number is odd or even</h1>
+            <input type="number" class="input">
+            <button class="btn">Click to check</button>
+            <p class="data"></p>
+        </section>
+
+        <!-- Section B 2-->
+        <section class="section-B numberGuess">
+            <h1>Guess the number 1 to 10</h1>
+            <input type="number" class="input">
+            <button class="btn">Click to check</button>
+            <button class="btn2">Restart</button>
+            <p class="data"></p>
+        </section>
+
+        <!-- Section B 3 -->
+        <section class="section-B .list_container">
+            <h1>Click to view list of favorite fruits</h1>
+            <button class="btn" onclick="fruitlist()">Click To show List</button>
+            <ol class="ordered_list">
+            </ol>
+        </section>
+
+    </section>
+    <!-- Section B Ends  -->
+    <!-- Section C -->
+    <!-- Togler button to toogle paragraph -->
+    <section class="section_c-container" id="section-c">
+        <h1 class="section-header">Section C</h1>
+        <section class="section_C">
+            <h1>Click toggle button to toggle paragraph</h1>
+            <button class="btn">Toggle data</button>
+            <p class="toggle_data">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae vel, cum
+                esse
+                repudiandae,
+                vitae autem id numquam, repellat impedit repellendus eius exercitationem voluptatum natus animi
+                laudantium
+                temporibus? Vel, nostrum autem.
+            </p>
+        </section>
+        <!-- Image Slide Gallery -->
+        <section class="image-gallery">
+            <h1>Image Gallery</h1>
+            <div class="wrap">
+                <div id="arrow-left" class="arrow"></div>
+                <div id="slider">
+                    <div class="slide slide1">
+                        <div class="slide-content">
+                            <span>Image One</span>
+                        </div>
+                    </div>
+                    <div class="slide slide2">
+                        <div class="slide-content">
+                            <span>Image Two</span>
+                        </div>
+                    </div>
+                    <div class="slide slide3">
+                        <div class="slide-content">
+                            <span>Image Three</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="arrow-right" class="arrow"></div>
+            </div>
+        </section>
+        <!-- Color Change using Selector -->
+        <section class="section_C">
+            <h1>Select and change the color of box</h1>
+            <select name="color" id="select-color" value="blueviolet">
+                <option value="blueviolet">blueviolet</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+            <div class="color-box"></div>
+        </section>
+    </section>
+    <!-- Section C Ends  -->
+</body>
+
+</html>
+<!-- Js file link -->
+<script src="./main.js"></script>
